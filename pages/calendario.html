@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="../images/logo-servicios.png" sizes="64x64">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/libs/css/style.css">
+    <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="../assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="../libraries/p5.min.js"></script>
+    <script src="../libraries/p5.dom.min.js"></script>
+    <!-- <script src="js/script_index.js"></script> -->
+    
+    <link rel="stylesheet" href="../css/calendar.css">
+    <script src="../libraries/calendar.js"></script>
+    <script src="../js/script_calendario.js"></script>
+    <script src="../utils/utils.js"></script>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>CALENDARIO DE PAGOS</title>
+</head>
+
+<body>
+    
+    <!-- ============================================================== -->
+    <!-- main wrapper -->
+    <!-- ============================================================== -->
+    <div class="dashboard-main-wrapper">
+        <!-- ============================================================== -->
+        <!-- navbar -->
+        <!-- ============================================================== -->
+        <div class="dashboard-header">
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <img src="../images/logo-servicios.png" alt="logoSEL" style="width: 10vh; padding: 5px;">
+                <a class="navbar-brand" style="font-size: 150%; color: white;">PORTAL DE CARGA DE FACTURAS</a>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-right-top">
+                        
+                        <!-- <li class="nav-item dropdown connection">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-fw fa-th"></i> </a>
+                            <ul class="dropdown-menu dropdown-menu-right connection-dropdown">
+                                <li class="connection-list">
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="assets/images/github.png" alt="" > <span>Github</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="assets/images/dribbble.png" alt="" > <span>Dribbble</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="assets/images/dropbox.png" alt="" > <span>Dropbox</span></a>
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+                                
+                            </ul>
+                        </li> -->
+                        <li class="nav-item dropdown nav-user">
+                            <a id="titleName" class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">Alonso&nbsp;&nbsp;<img src="../images/usuario.png" alt="" class="user-avatar-md rounded-circle"></a>
+                            <!-- <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="nav-user-info">
+                                    <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
+                                    <span class="status"></span><span class="ml-2">Available</span>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                            </div> -->
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end navbar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- left sidebar -->
+        <!-- ============================================================== -->
+        <div class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="d-xl-none d-lg-none" href="#">MENÚ</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                MENÚ
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="calendario.html"  aria-controls="submenu-1"><i class="fa fa-fw fa-calendar-alt"></i>CALENDARIO DE PAGOS</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="mis_facturas.html"  aria-controls="submenu-1"><i class="fa fa-fw fa-file-invoice"></i>MIS FACTURAS</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="subir_facturas.html"  aria-controls="submenu-1"><i class="fa fa-fw fa-file-upload"></i>SUBIR FACTURAS</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="mi_perfil.html"  aria-controls="submenu-1"><i class="fa fa-fw fa-id-card"></i>MI PERFIL</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end left sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- wrapper  -->
+        <!-- ============================================================== -->
+        <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header">
+                                <h2 class="pageheader-title">CALENDARIO DE PAGOS</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="ecommerce-widget">
+
+                        <div class="row">
+                            <div class="col-md-12" >
+
+                                <div id="calendar" style="width:100%"></div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card " id="tabla_posiciones">
+                                    <h5 class="card-header" style="color: white;">FACTURAS PAGADAS</h5>
+                                    <div class="card-body p-0 " style="height: 330px;">
+                                        <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar" style="height: 330px;">
+                                            <table class="table no-wrap p-table table-bordered table-striped mb-0" >
+                                                <thead class="bg-light ">
+                                                    <tr class="border-0 ">
+                                                        <th class="border-0">NOMBRE DE FACTURA</th>
+                                                        <th class="border-0">MONTO</th>
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="t_facturas">
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card " id="tabla_posiciones">
+                                    <h5 class="card-header" style="color: white;">FACTURAS RESTANTES DE CAPTURAR</h5>
+                                    <div class="card-body p-0 " style="height: 330px;">
+                                        <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar" style="height: 330px;">
+                                            <table class="table no-wrap p-table table-bordered table-striped mb-0" >
+                                                <thead class="bg-light ">
+                                                    <tr class="border-0 ">
+                                                        <th class="border-0">NOMBRE DE FACTURA</th>
+                                                        <th class="border-0">MONTO</th>
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="t_facturas_restantes">
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                           
+                        </script>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- end main wrapper  -->
+    <!-- ============================================================== -->
+    <!-- Optional JavaScript -->
+    <!-- jquery 3.3.1 -->
+    <!-- bootstap bundle js -->
+    <!-- <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script> -->
+    <!-- main js -->
+</body>
+</html>
