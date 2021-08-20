@@ -10,4 +10,5 @@ function setup() {
     }
     btn_subir = select('#btnSubir')
     btn_subir.attribute('disabled','')
+    checkUser()
 }
