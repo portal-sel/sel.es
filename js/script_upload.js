@@ -22,6 +22,7 @@ function setup() {
     arrayInvoice.forEach(element => {
         invoiceSelector.option(element)
     });
+    btn_subir.attribute('disabled','')
 }
 
 function uploadPDF() {
