@@ -12,6 +12,7 @@ function preload(){
 function setup() {
     getMs()
     setName()
+    checkUser()
     btn_subir = select('#btnSubirPDF')
     btn_subir.mouseClicked(validateFiles)
 
