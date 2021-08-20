@@ -8,4 +8,6 @@ function setup() {
         docSelector.option(`Documento ${index}`)
         
     }
+    btn_subir = select('#btnSubir')
+    btn_subir.attribute('disabled','')
 }
