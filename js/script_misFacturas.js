@@ -4,6 +4,8 @@ var script_url = 'https://script.google.com/macros/s/AKfycbz3OseL35TM0Qge_IDC2Au
 function setup() {
     // cargarInicio();
     setName()
+    btn_subir = select('#btnSubirComplemento');
+    btn_subir.attribute('disabled','')
 }
 
 function cargarInicio(){
