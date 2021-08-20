@@ -30,7 +30,7 @@ function login() {
         });
 
     }else{
-        swal('There are empty fields','','error');
+        swal('Hay campos vacíos','','error');
     }
 
 }
@@ -44,6 +44,6 @@ function loginResponse(e) {
         location.href="pages/calendario.html";
     }else{
         btn_login.removeAttribute('disabled');
-        swal('Incorrect username or password','','error')
+        swal('Datos incorrectos','','error')
     }
 }
