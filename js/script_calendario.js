@@ -2,7 +2,7 @@ const script_url = '';
 let urlMs = '';
 function setup() {
     getMs()
-
+    checkUser()
     setName()
 
     $(document).ready(function(e){
@@ -11,9 +11,9 @@ function setup() {
             // console.log(ev.currentSelected)
             const [anio, mes, dia] = ev.currentSelected.split('-')
             
-            consultaDia(ev.currentSelected)
+            //consultaDia(ev.currentSelected)
         };
-        calendar.diasResal = [4,15,26]
+        //calendar.diasResal = [4,15,26]
        
         calendar.createCalendar();
     });
