@@ -6,6 +6,7 @@ function setup() {
     setName()
     btn_subir = select('#btnSubirComplemento');
     btn_subir.attribute('disabled','')
+    checkUser()
 }
 
 function cargarInicio(){
