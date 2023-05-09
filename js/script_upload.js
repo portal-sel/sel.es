@@ -33,8 +33,8 @@ function setup() {
         $('[data-toggle="tooltip"]').tooltip()
       })
     getMs()
-    // setName()
-    // checkUser()
+    setName()
+    checkUser()
     getPendientes()
 
     console.log(validarCeros('31530807031234'))
