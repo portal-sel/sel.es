@@ -16,8 +16,8 @@ function setup() {
 
     var btn_descargar = select('#btnDescargar');
     btn_descargar.mouseClicked(generaCsv)
-    // setName()
-    // checkUser()
+    setName()
+    checkUser()
     try {
         // console.log('intenta');
         if(localStorage.getItem('servicios') == 'false'){
